@@ -1,0 +1,91 @@
+<html>
+<SCRIPT language=JavaScript>
+
+var message="You Have No Permission";
+
+
+ function clickIE4(){
+   if (event.button==2){
+     alert(message);
+     return false;
+   }
+ }
+
+ function clickNS4(e){
+   if (document.layers||document.getElementById&&!document.all){
+     if (e.which==2||e.which==3){
+       alert(message);
+       return false;
+      }
+   }
+ }
+
+  if (document.layers){
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown=clickNS4;
+   }
+   else if (document.all&&!document.getElementById){
+      document.onmousedown=clickIE4;
+   }
+
+   document.oncontextmenu=new Function("alert(message);return false")
+</SCRIPT>
+<script language="JavaScript">
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+    document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+</script>
+<head>
+	<title>Billard</title>
+	<link rel="icon" href="pepe.ico"/>
+	<link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+
+<body>
+                	<div class="centerContainer">
+		<div id="quoteText"><a href=/index.html></a> </div>
+		<a href=>
+			<img id="logo" src="agra.png" />
+		</a>
+	</div>
+		
+		<div id="membersList" class="scrollbar">
+		<a href=https://www.youtube.com/channel/UC5zeuzxdf6pREwcAkG84WnQ>YouTube</a> <br>
+		<a href=http://steamcommunity.com/id/Agra_>Steam</a> <br>
+		<a href=https://github.com/Agra420>Github</a> <br>
+		</div>
+		
+		
+		
+		<video autoplay loop id="video">
+		<source src="agra.mp4" type="video/mp4" 
+		</video>
+		
+		<script>
+			var video = document.currentScript.parentElement;
+			video.volume = 0.5;
+        </script>
+
+
+</body>
+
+
+</html>

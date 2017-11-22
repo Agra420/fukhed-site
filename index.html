@@ -1,0 +1,94 @@
+<html>
+<SCRIPT language=JavaScript>
+
+var message="You Have No Permission";
+
+
+ function clickIE4(){
+   if (event.button==2){
+     alert(message);
+     return false;
+   }
+ }
+
+ function clickNS4(e){
+   if (document.layers||document.getElementById&&!document.all){
+     if (e.which==2||e.which==3){
+       alert(message);
+       return false;
+      }
+   }
+ }
+
+  if (document.layers){
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown=clickNS4;
+   }
+   else if (document.all&&!document.getElementById){
+      document.onmousedown=clickIE4;
+   }
+
+   document.oncontextmenu=new Function("alert(message);return false")
+</SCRIPT>
+<script language="JavaScript">
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+    document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+</script>
+<head>
+	<title>FuckHeads</title>
+	<link rel="icon" href="pepe.ico"/>
+	<link rel="stylesheet" href="main.css" type="text/css" />
+	
+	<meta charset="UTF-8">
+  	<meta name="description" content="page 4 friends">
+  	<meta name="keywords" content="csgo,bad,word">
+  	<meta name="author" content="Agra"
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+
+<body>
+	<div class="centerContainer">
+		<a href=>
+			<img id="logo" src="fuckheadbanner.png" />
+		</a>
+	</div>
+		<div id="membersList" class="scrollbar">
+        <a href="m3mb3rs/Agra/Agra.html">Agra</a> <br>
+		<a href="m3mb3rs/billard/Billard.html">Billard</a> <br>
+        <a href="m3mb3rs/nate/nate.html">/Nate/</a><br>
+				
+		<video autoplay loop id="video">
+		<source src="max.mp4"Spe="video/mp4" 
+		</video>
+		
+		<script>
+			var video = document.currentScript.parentElement;
+			video.volume = 0.5;
+        </script>
+
+
+</body>
+
+
+</html>
+
